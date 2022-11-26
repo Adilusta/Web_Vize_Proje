@@ -104,6 +104,7 @@ namespace Web_Vize_Proje.Controllers
 			
 			else
 			{
+				//string message = "Hatalı giriş yaptınız "
                 return View();
             }
 			
