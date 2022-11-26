@@ -82,5 +82,32 @@ namespace Web_Vize_Proje.Controllers
             return RedirectToAction("Duyurular");
         }
 
+        [HttpGet]
+        public IActionResult GirisYap()
+        {
+
+            return View();
+        }
+
+
+        [HttpPost]
+		public IActionResult GirisYap(Yonetici yonetici)
+		{
+				var result=	context.Yoneticiler.SingleOrDefault(p => p.YoneticiKullanıcıAdi == yonetici.YoneticiKullanıcıAdi &&
+				p.YoneticiSifre == yonetici.YoneticiSifre);
+			//if (result.YoneticiKullanıcıAdi==yonetici.YoneticiKullanıcıAdi&&
+			//	result.YoneticiSifre==yonetici.YoneticiSifre)
+			if (result!=null)
+			{
+                return RedirectToAction("Duyurular");
+            }
+			
+			else
+			{
+                return View();
+            }
+			
+		}
+		
     }
 }
