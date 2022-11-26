@@ -1,0 +1,21 @@
+﻿@model Duyuru
+
+
+@using (Html.BeginForm("DuyuruDuzenle", "Yonetici", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.DuyuruID)
+   @* @Html.TextBoxFor(x=> x.BlogId , new {@class= "form-control"})*@
+    @Html.HiddenFor(x => x.DuyuruTarihi)
+        <br />
+    @Html.Label("Duyuru Başlığı")
+    @Html.TextBoxFor(x=> x.DuyuruBasligi, new {@class="form-control"})
+
+        <br />
+    @Html.Label("Duyuru İçeriği")
+    @Html.TextAreaFor(x=>x.DuyuruAciklamasi,10,3, new{@class="form-control"})
+   <br />
+    <button  class="btn btn-success"> Güncelle </button>
+
+                                               
+
+}

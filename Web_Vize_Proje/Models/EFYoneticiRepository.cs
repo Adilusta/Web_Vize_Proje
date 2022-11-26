@@ -16,6 +16,7 @@ namespace Web_Vize_Proje.Models
             return result;
            
         }
+        
 
     }
 }

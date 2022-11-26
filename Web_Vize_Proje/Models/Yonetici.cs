@@ -9,5 +9,6 @@ namespace Web_Vize_Proje.Models
 
         public string YoneticiKullanıcıAdi { get; set; }
         public string YoneticiSifre { get; set; }
+
     }
 }
