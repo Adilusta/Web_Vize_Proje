@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.Reflection.Metadata;
+using System.Security.Cryptography.X509Certificates;
 using Web_Vize_Proje.Models;
 
 namespace Web_Vize_Proje.Controllers
@@ -104,11 +105,17 @@ namespace Web_Vize_Proje.Controllers
 			
 			else
 			{
-				//string message = "Hatalı giriş yaptınız "
-                return View();
+
+				return RedirectToAction("HataliGiris");
             }
-			
+
 		}
-		
+        [HttpGet]
+		public IActionResult HataliGiris()
+		{
+
+			return View();
+		}
+
     }
 }
