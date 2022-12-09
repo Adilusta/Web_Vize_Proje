@@ -8,7 +8,10 @@ namespace Web_Vize_Proje.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Duyurular",
+
+                name: "Duyurular",//Duyurular veritabanından çekilerek duyurular tablosu oluşturuluyor.
+
+
                 columns: table => new
                 {
                     DuyuruID = table.Column<int>(type: "int", nullable: false)
@@ -23,7 +26,7 @@ namespace Web_Vize_Proje.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Yoneticiler",
+                name: "Yoneticiler",//Yönetici bilgileri veritabanından çekilerek yöneticiler tablosu oluşturuluyor.
                 columns: table => new
                 {
                     YoneticiID = table.Column<int>(type: "int", nullable: false)

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -83,7 +84,7 @@ namespace Web_Vize_Proje.Controllers
            
             return RedirectToAction("Duyurular");
         }
-
+		//[AllowAnonymous]
         [HttpGet]
         public IActionResult GirisYap()
         {
@@ -91,8 +92,8 @@ namespace Web_Vize_Proje.Controllers
             return View();
         }
 
-
-        [HttpPost]
+		//[AllowAnonymous]
+		[HttpPost]
 		public IActionResult GirisYap(Yonetici yonetici)
 		{
 				var result=	context.Yoneticiler.SingleOrDefault(p => p.YoneticiKullanıcıAdi == yonetici.YoneticiKullanıcıAdi &&
