@@ -26,6 +26,7 @@ namespace Web_Vize_Proje.Controllers
         public IActionResult DuyuruGetir(int id=1)
         {
 			//var result = context.Duyurular.Where(p => p.DuyuruID == id);
+			// Select * from Duyurular where duyuru_id=id
             var res = context.Duyurular.SingleOrDefault(p => p.DuyuruID == id);
             return View(res);
         }
