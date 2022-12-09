@@ -20,7 +20,7 @@ namespace Web_Vize_Proje
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>();//It says program is going to open in this file.
                 });
     }
 }
